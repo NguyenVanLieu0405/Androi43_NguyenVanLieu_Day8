@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Food Order</string>
+    --login--
+    <string name="edt_username"> Username</string>
+    <string name="edt_password"> Password</string>
+    <string name="bt_login">Login</string>
+    --Food order--
+    <string name="tv_title">Food order</string>
+    <string name="tv_welcome">Welcome KhoaHA</string>
+    <string name="tv_dish1">Pizza Panda</string>
+    <string name="tv_dish2">KFC Super</string>
+    <string name="tv_dish3">Bread Eggs</string>
+    <string name="tv_dish4">Coca Cola</string>
+    <string name="tv_dish5">Chicken super</string>
+    <string name="tv_dish6">Cup Cake</string>
+    <string name="tv_totalprice">Total Price</string>
+    <string name="bt_order">Order</string>
+    <string name="tv_thankyou">Thank you! Your order is sent to restaurant!</string>
+    -- Your order--
+    <string name="tv_title_yourorder">Your oder</string>
+    <string name="tv_yourorder_dish1">Pizza Panda (2)</string>
+    <string name="tv_yourorder_dish2">KFC Super (1)</string>
+    <string name="tv_yourorder_dish3">Bread Eggs (3)</string>
+    <string name="tv_yourorder_dish4">Coca Cola (1)</string>
+    <string name="tv_yourorder_totalprice">Total Price</string>
+</resources>
