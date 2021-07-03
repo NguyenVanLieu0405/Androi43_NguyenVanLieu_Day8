@@ -1,6 +1,7 @@
 package com.example.foodorder;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,24 +12,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements ILogin {
-    Button bt_login;
+import com.example.foodorder.databinding.ActivityMainBinding;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements ILogin {
+    ActivityMainBinding binding;
+
     LoginPresenter loginPresenter;
-    EditText tvuser,tvpass;
+
+    public static int sl =0;
+    public static Double tongtien=0.0;
+    public static List<ContactCart> contactCartList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        contactCartList=new ArrayList<>();
         loginPresenter=new LoginPresenter(this);
-        bt_login = findViewById(R.id.btlogin);
-        tvuser=findViewById(R.id.etusername);
-        tvpass=findViewById(R.id.etpassword);
-        bt_login.setOnClickListener(new View.OnClickListener() {
+
+
+        binding.btlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = tvuser.getText().toString();
-                String password = tvpass.getText().toString();
+                String username = binding.etusername.getText().toString();
+                String password = binding.etpassword.getText().toString();
                 loginPresenter.onLogin(username,password);
             }
         });
